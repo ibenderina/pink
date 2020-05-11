@@ -1,0 +1,26 @@
+{
+  "name": "Pink",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Сайт для загрузки фотографий",
+  "scripts": {
+    "eslint": "eslint src/**/*.js",
+    "test": "npm run eslint",
+    "build": "webpack -p --env.type=development",
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "css-loader": "3.5.3",
+    "eslint": "6.1.0",
+    "eslint-config-htmlacademy": "0.5.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "1.2.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  },
+  "engines": {
+    "node": "10"
+  }
+}

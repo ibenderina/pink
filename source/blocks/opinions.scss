@@ -1,0 +1,25 @@
+.opinions__list {
+  padding: 0 20px;
+
+  list-style-type: none;
+}
+
+.opinions__toggle {
+  text-align: center;
+}
+
+.opinions__toggle-radio {
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid #283745;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:checked {
+    border: 4px solid #283745;
+  }
+}

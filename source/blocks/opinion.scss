@@ -1,0 +1,23 @@
+.opinion {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.opinion__name {
+  order: 1;
+
+  font-weight: bold;
+}
+
+.opinion__person {
+  display: none;
+}
+
+.opinion__text {
+  order: 3;
+
+  font-size: 14px;
+  line-height: 30px;
+}

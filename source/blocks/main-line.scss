@@ -1,0 +1,36 @@
+.main-line {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px 15px 15px 15px;
+}
+
+.main-line__logo-link {
+  width: 85%;
+}
+
+.main-line__logo-image {
+  height: 20px;
+  width: 60px;
+
+  &:hover path {
+    fill: #d22856;
+  }
+}
+
+.main-line__toggle {
+  background-color: inherit;
+  border: none;
+}
+
+.main-line__toggle-image {
+  height: 25px;
+  width: 25px;
+
+  &:hover path {
+    fill: #d22856;
+  }
+
+  &--burger {
+
+  }
+}
