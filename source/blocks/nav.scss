@@ -22,13 +22,17 @@
 
   text-align: center;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #283340;
+
+    .nav__list-link {
+      color: #d22856;
+    }
+  }
 }
 
 .nav__list-link {
   color: #ffffff;
   text-decoration: none;
-
-  &:hover {
-    color: #d22856;
-  }
 }

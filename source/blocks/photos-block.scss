@@ -1,0 +1,23 @@
+@import "../mixin";
+
+.photos-block {
+  padding: 20px;
+}
+
+.photos-block__headline {
+  @include mainHeadline;
+
+  margin: 0;
+  padding: 70px 20px;
+
+  font-weight: lighter;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+}
+
+.photos-block__text {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}

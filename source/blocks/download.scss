@@ -1,14 +1,11 @@
+@import "../mixin";
+
 .download {
   position: relative;
   margin: 0;
   padding: 300px 10px 30px 10px;
 
-  background-color: #283745;
-  background-image: url("/img/bg-back-mobile@1x.jpg");
-  background-size: 121% 51%;
-  background-repeat: no-repeat;
-
-  text-align: center;
+  @include mainHeadline;
 
   &::before {
     content: "";

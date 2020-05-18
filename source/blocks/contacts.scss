@@ -1,0 +1,45 @@
+.contacts {
+  padding: 20px 0;
+
+  text-align: center;
+}
+
+.contacts__text {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+.contacts__list {
+  position: relative;
+  padding: 0 20px;
+
+  list-style-type: none;
+}
+
+.contacts__map {
+  position: relative;
+  width: 100%;
+  height: 300px;
+
+  background-image: url("/img/bg-map-mobile@1x.png");
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+
+    background-color: transparent;
+    background-image: url("/img/bg-triangle-white-footer.svg");
+  }
+
+  &--iframe {
+    width: 100%;
+  }
+}

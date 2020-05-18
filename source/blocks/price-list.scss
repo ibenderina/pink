@@ -1,4 +1,14 @@
+@import "../mixin";
+
 .price-list {
   padding: 20px;
   background-color: #f2f2f2;
+}
+
+.price-list__toggle {
+  text-align: center;
+}
+
+.price-list__toggle-radio {
+  @include toggleStyle;
 }

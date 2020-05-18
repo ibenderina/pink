@@ -1,0 +1,24 @@
+@mixin toggleStyle {
+  width: 10px;
+  height: 10px;
+
+  border: 2px solid #283745;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:checked {
+    border: 4px solid #283745;
+  }
+}
+
+@mixin mainHeadline {
+  background-color: #283745;
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-size: 121% 51%;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}

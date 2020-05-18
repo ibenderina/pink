@@ -3,6 +3,7 @@
 @import "blocks/buttons";
 @import "blocks/comment";
 @import "blocks/contacts";
+@import "blocks/contact";
 @import "blocks/download";
 @import "blocks/filters";
 @import "blocks/footer";
@@ -13,9 +14,11 @@
 @import "blocks/opinion";
 @import "blocks/opinions";
 @import "blocks/photo";
+@import "blocks/photo-list";
 @import "blocks/photos-block";
 @import "blocks/price-list";
 @import "blocks/research";
 @import "blocks/table";
 @import "blocks/upload";
 @import "common";
+@import "mixin";

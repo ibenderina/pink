@@ -36,16 +36,16 @@
   </nav>
 </header>
 <main class="main">
-  <h1 class="main__headline">Фотографии пользователей</h1>
   <section class="main__photos-block photos-block">
+    <h1 class="photos-block__headline">Фотографии пользователей</h1>
     <p class="photos-block__text">Взгляните на фотографии, которые выкладывают пользователи!</p>
     <p class="photos-block__text">Видите, как не хватает ваших?</p>
     <ul class="photos-block__photo-list photo-list">
-      <li class="photo-list__photo photo-list__photo--panorama photo">
-        <img class="photos-block__image" src="../img/panorama-mobile@1x.jpg" alt="" height="200">
-        <div class="photos-block__comment comment">
+      <li class="photo-list__photo photo photo--panorama">
+        <img class="photo__image" src="../img/panorama-mobile@1x.jpg" alt="">
+        <div class="photo__comment comment">
           <span class="comment__name">Анна
-            (<span class="comment__time">5 МИНУТ НАЗАД</span>)
+            <span class="comment__time">(5 МИНУТ НАЗАД)</span>
           </span>
               <p class="comment__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе,
                 задавайте свои вопросы!
@@ -56,8 +56,8 @@
         </div>
       </li>
       <li class="photo-list__photo photo">
-        <img class="photo__image" src="" alt="">
-        <div class="photos-block__comment comment">
+        <img class="photo__image" src="../img/photo-1-mobile@1x.jpg" alt="">
+        <div class="photo__comment comment">
           <span class="comment__name">Левон
             (<span class="comment__time">5 ЧАСОВ НАЗАД</span>)
           </span>
@@ -85,12 +85,12 @@
         <dt class="filters__item"></dt>
         <dd class="filters__scale"></dd>
       </dl>
-      <div class="upload__comment comment">
-        <label class="comment__label">
-          <input class="comment__input" type="text" placeholder="Введите имя">
+      <div class="upload__comment">
+        <label class="upload__comment-label">
+          <input class="upload__comment-input" type="text" placeholder="Введите имя">
         </label>
-        <label class="comment__label">
-          <textarea class="comment__input" placeholder="Введите комментарий"></textarea>
+        <label class="upload__comment-label">
+          <textarea class="upload__comment-input" placeholder="Введите комментарий"></textarea>
         </label>
       </div>
       <div class="upload__buttons buttons">
