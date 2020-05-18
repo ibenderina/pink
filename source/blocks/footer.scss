@@ -5,6 +5,10 @@
   padding: 10px 20px;
 }
 
+.footer__logo {
+  fill: #d22856;
+}
+
 .footer__apps {
   display: flex;
   width: 100%;
@@ -21,11 +25,15 @@
   width: 27px;
   height: 27px;
 
-  border: 2px solid #e9ebec;
+  border: 2px solid rgba(40, 54, 69, 0.3);
   border-radius: 50%;
 
   &:hover {
-    border-color: black;
+    border-color: rgba(40, 54, 69, 0.7);
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -58,5 +66,9 @@
 
   &:hover {
     opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

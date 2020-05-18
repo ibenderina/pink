@@ -1,0 +1,43 @@
+.filters {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.filters__item-block {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.filters__item {
+  margin: 0;
+  width: 80px;
+}
+
+.filters__scale-block {
+  display: flex;
+}
+
+.filters__scale-range {
+  width: 220px;
+
+  &:hover {
+    border-color: rgba(40, 54, 69, 0.6);
+  }
+}
+
+.filters__item-image {
+  fill: rgba(40, 54, 69, 0.3);
+
+  &:hover {
+    fill: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    fill: #d22856;
+  }
+}

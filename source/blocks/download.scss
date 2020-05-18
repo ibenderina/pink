@@ -6,6 +6,7 @@
   padding: 300px 10px 30px 10px;
 
   @include mainHeadline;
+  background-size: 121% 51%;
 
   &::before {
     content: "";
@@ -37,6 +38,10 @@
   &:hover {
     color: #d22856;
   }
+
+  &:active {
+    opacity: 0.6;
+  };
 }
 
 .download__link {

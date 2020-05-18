@@ -27,7 +27,7 @@ module.exports = (env) => {
         },
         resolve: {
             alias: {
-                '@utils': path.resolve(__dirname, `src/utils`),
+                '@mixin': path.resolve(__dirname, `source/mixin`),
                 '@consts': path.resolve(__dirname, `src/consts`),
             }
         }

@@ -1,0 +1,28 @@
+.buttons {
+  display: inline-block;
+  max-width: 300px;
+}
+
+.buttons-style {
+  display: block;
+  margin-bottom: 15px;
+  width: 200px;
+  padding: 15px;
+
+  border: 2px solid rgba(40, 54, 69, 0.3);
+  border-radius: 50px;
+  background-color: transparent;
+
+  color: rgba(40, 54, 69, 0.3);
+  font-weight: bold;
+
+  &:hover {
+    border-color: rgba(40, 54, 69, 0.6);
+    color: rgba(40, 54, 69, 0.6);
+  }
+
+  &:active {
+    border-color: #d22856;
+    color: #d22856;
+  };
+}

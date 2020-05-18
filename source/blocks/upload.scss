@@ -1,0 +1,52 @@
+.upload__text {
+  margin: 0;
+  padding: 20px 20px 45px 20px;
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 24px;
+  color: #444444;
+}
+
+.upload__text-br {
+  display: block;
+}
+
+.upload__form {
+  padding: 40px 0;
+
+  background-color: #f2f2f2;
+
+  text-align: center;
+}
+
+.upload__photo-image {
+  width: 250px;
+  height: 350px;
+}
+
+.upload__comment {
+
+}
+
+.upload__comment-label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.upload__comment-input {
+  padding: 10px;
+  width: 200px;
+  margin: 0 auto;
+
+  border: 2px solid rgba(40, 54, 69, 0.3);
+
+  &:hover {
+    border-color: rgba(40, 54, 69, 0.6);
+  }
+}
+
+.upload__comment-input--textarea {
+  height: 200px;
+  resize: none;
+}

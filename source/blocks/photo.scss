@@ -1,9 +1,39 @@
 .photo {
+  margin: 10px auto;
+  width: 90%;
+  max-width: 600px;
 
+  background-color: #f2f2f2;
+}
+
+.photo--panorama {
+  position: relative;
+
+  &::after {
+    content: "Панорама дня";
+    position: absolute;
+    width: 150px;
+    padding: 6px 0;
+    top: 0;
+    right: 0;
+
+    background-color: #d22856;
+
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .photo__image {
+    width: 101vw;
+    margin-left: -6%;
+  }
 }
 
 .photo__image {
-
+  width: 100%;
+  max-height: 350px;
 }
 
 .photo__comment {

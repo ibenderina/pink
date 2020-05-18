@@ -1,28 +1,57 @@
 .table {
-  background-color: #ffffff;
+  background-color: red;
+}
+
+.table__content {
+  white-space: nowrap;
 }
 
 .table__cell {
   padding: 5px 10px;
-  width: 30px;
-  height: 30px;
 
-  border: 1px solid black;
-  background-repeat: no-repeat;
+  background-color: white;
 
   text-align: center;
+  color: #444444;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-.table__cell--yes {
-  background-image: url("/img/icon-check.svg");
+.table__cell--pink:before {
+  content: "Розовый фильтр";
+
+  font-weight: lighter;
 }
 
-.table__cell--no {
-  background-image: url("/img/icon-no.svg");
+.table__cell--smiles:before {
+  content: "Смайлики";
+
+  font-weight: lighter;
+}
+
+.table__cell--comments:before {
+  content: "Комментарии";
+
+  font-weight: lighter;
 }
 
 .table__cell--hit {
+  position: relative;
+
   background-image: url("/img/bg-hit.svg");
+  background-repeat: no-repeat;
+
+  &:after {
+    content: "Хит";
+    position: absolute;
+    top: 0;
+    left: 16px;
+    transform: rotate(-45deg);
+
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
 }
 
 .table__header .table__cell {
@@ -32,11 +61,14 @@
   text-transform: uppercase;
 }
 
-.table__cell--empty {
-  background-color: red;
-  border: 1px solid transparent;
-}
-
 .table__cell--headline {
+  padding: 10px;
   font-weight: bold;
+  word-wrap: normal;
+
+  .table__cell {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
 }
