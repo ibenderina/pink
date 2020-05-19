@@ -13,3 +13,9 @@
   color: #d22856;
   font-size: 24px;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contact {
+    padding: 25px;
+  }
+}

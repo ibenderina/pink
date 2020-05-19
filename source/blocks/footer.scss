@@ -9,6 +9,10 @@
   fill: #d22856;
 }
 
+.footer__logo--desktop {
+  display: none;
+}
+
 .footer__apps {
   display: flex;
   width: 100%;
@@ -70,5 +74,33 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__apps {
+    width: auto;
+    margin: 0;
+  }
+
+  .footer__developer {
+    width: 120px;
+    flex-grow: 0;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .footer__logo--desktop {
+     display: block;
+   }
+
+  .footer__logo--mobile {
+    display: none;
   }
 }

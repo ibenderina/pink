@@ -21,3 +21,24 @@
   font-size: 14px;
   line-height: 30px;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .opinion__text {
+    order: 0;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .opinion__person {
+    display: inline-block;
+    order: 2;
+
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+
+
+

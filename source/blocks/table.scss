@@ -1,5 +1,7 @@
+@import "../mixin";
+
 .table {
-  background-color: red;
+  background-color: inherit;
 }
 
 .table__content {
@@ -33,6 +35,11 @@
   content: "Комментарии";
 
   font-weight: lighter;
+}
+
+.table__cell--empty,
+.table__cell--row-name {
+  display: none;
 }
 
 .table__cell--hit {
@@ -70,5 +77,47 @@
     display: block;
     padding: 0;
     margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .table {
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+
+  .table__cell--empty {
+    display: block;
+    border: none;
+  }
+
+  .table__cell--headline {
+    border-bottom: none;
+  }
+
+  .table__cell--row-name {
+    display: block;
+  }
+
+  .table__cell--pink,
+  .table__cell--smiles,
+  .table__cell--comments {
+    position: relative;
+
+    &:before {
+      @include tableCellState;
+      background-image: url("/img/icon-yes.svg");
+    }
+  }
+
+  .table__cell--no {
+    position: relative;
+
+    &:before {
+      @include tableCellState;
+      background-image: url("/img/icon-no.svg");
+    }
   }
 }

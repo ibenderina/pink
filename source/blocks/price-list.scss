@@ -17,14 +17,14 @@
   @include toggleStyle;
 }
 
-@media (min-width: 500px) and (max-width: 767px) {
+@media (min-width: 500px) {
   .price-list__toggle {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
-  .price-list__toggle {
-    display: block;
+  .price-list {
+    padding: 70px 20px 50px 20px;
   }
 }

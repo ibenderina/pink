@@ -1,0 +1,22 @@
+@import "../mixin";
+
+.main__wrapper {
+  padding: 300px 10px 30px 10px;
+
+  @include mainHeadline;
+  background-size: 100% 51%;
+}
+
+@media (min-width: 507px) and (max-width: 767px) {
+  .main__wrapper {
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main__wrapper {
+    padding: 40px 300px 40px 40px;
+
+    background-size: 100%;
+  }
+}

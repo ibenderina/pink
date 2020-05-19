@@ -43,3 +43,20 @@
 .contacts__map-iframe {
   width: 100%;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    padding-top: 60px;
+  }
+
+  .contacts__text {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .contacts__list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

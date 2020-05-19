@@ -1,0 +1,63 @@
+.research {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .research {
+    position: relative;
+    display: block;
+    padding: 30px 30px 100px 350px;
+
+    &:before {
+       content: "";
+
+       position: absolute;
+       top: 9%;
+       left: 9%;
+       width: 200px;
+       height: 233px;
+
+       background-image: url("/img/icon-timer.svg");
+       background-size: 100%;
+       background-repeat: no-repeat;
+     }
+
+    &:after {
+      content: "24";
+
+      position: absolute;
+      top: 25%;
+      left: 11%;
+      padding: 45px 15px;
+
+      border: 20px solid #d22856;
+      border-radius: 100%;
+
+      color: #d22856;
+      font-size: 87px;
+      font-weight: bold;
+    }
+  }
+
+  .research__text {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .research__description {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .research__link {
+    display: block;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: #d22856;
+  }
+}

@@ -17,6 +17,11 @@
   }
 }
 
+.main-line__logo-image--tablet,
+.main-line__logo-image--desktop {
+  display: none;
+}
+
 .main-line__toggle {
   background-color: inherit;
   border: none;
@@ -32,5 +37,40 @@
 
   &--burger {
 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main-line__logo-image {
+    height: 39px;
+    width: 150px;
+  }
+
+  .main-line__logo-image--mobile {
+    display: none;
+  }
+
+  .main-line__logo-image--tablet {
+    display: inline-block;
+  }
+
+  .main-line__logo-link {
+    width: 93%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-line__logo-image {
+    height: 64px;
+    width: 200px;
+  }
+
+  .main-line__logo-image--tablet,
+  .main-line__logo-image--mobile {
+    display: none;
+  }
+
+  .main-line__logo-image--desktop {
+    display: inline-block;
   }
 }

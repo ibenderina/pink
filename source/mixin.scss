@@ -21,3 +21,16 @@
 
   text-align: center;
 }
+
+@mixin tableCellState {
+  content: "";
+
+  position: absolute;
+  top: 17%;
+  left: 43%;
+  width: 28px;
+  height: 34px;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

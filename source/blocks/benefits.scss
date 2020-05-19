@@ -51,3 +51,39 @@
 .benefits__text {
   margin: 0;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .benefits {
+    padding: 67px 0 20px 0;
+
+    &:after {
+      top: 30%;
+      height: 100px;
+      background-size: 111% 85%;
+    }
+
+    &:before {
+      bottom: 5%;
+      left: 4%;
+      width: 270px;
+      height: 480px;
+      z-index: 10;
+
+      background-image: url(/img/iphone-screen-1-tablet@1x.png);
+    }
+  }
+
+  .benefits__text {
+    font-size: 40px;
+    line-height: 48px;
+
+    &:last-of-type {
+      padding-bottom: 47px;
+    }
+  }
+
+  .benefits__list {
+    padding: 30px 0 30px 300px;
+  }
+}
+

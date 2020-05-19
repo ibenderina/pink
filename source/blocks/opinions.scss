@@ -13,3 +13,11 @@
 .opinions__toggle-radio {
   @include toggleStyle;
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .opinions {
+    padding: 30px 20px;
+
+    background-color: #ffffff;
+  }
+}
