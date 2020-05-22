@@ -76,7 +76,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 999px) {
   .download {
     display: flex;
     flex-direction: column;
@@ -113,3 +113,22 @@
     z-index: 10;
   }
 }
+
+@media (min-width: 790px) and (max-width: 999px) {
+  .download:before {
+    top: 2%;
+    left: 43%;
+    width: 580px;
+    height: 477px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .download:before {
+    bottom: 0;
+    left: 66%;
+    width: 580px;
+    height: 426px;
+  }
+}
+

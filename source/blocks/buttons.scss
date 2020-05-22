@@ -26,3 +26,14 @@
     color: #d22856;
   };
 }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .buttons {
+    display: inline-block;
+    padding: 95px 20px 20px 20px;
+  }
+
+  .buttons-style:first-of-type {
+    margin-bottom: 55px;
+  }
+}

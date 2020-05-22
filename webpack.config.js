@@ -1,6 +1,5 @@
 const path = require(`path`);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
     return {
@@ -9,8 +8,6 @@ module.exports = (env) => {
         output: {
             filename: `bundle.js`,
             path: path.join(__dirname, `public`),
-            publicPath: `/public`
-
         },
         devtool: `source-map`,
         devServer: {
@@ -21,34 +18,16 @@ module.exports = (env) => {
             rules: [
                 {
                     test: /\.scss$/,
-                    use: ExtractTextPlugin.extract({
+                    use: ExtractTextPlugin.extract(
+                        {
                             fallback: 'style-loader',
                             use: ['css-loader', 'sass-loader']
-                        }),
-                    // use: [
-                    //     `style-loader`,
-                    //     `css-loader`,
-                    //     `sass-loader`,
-                    // ],
+                        })
                 }
             ],
         },
         plugins: [
-            new ExtractTextPlugin(
-                {filename: 'style.css'}
-            ),
-            new HtmlWebpackPlugin({
-                inject: false,
-                hash: true,
-                template: './source/index.html',
-                filename: 'index.html'
-            })
-        ],
-        resolve: {
-            alias: {
-                '@mixin': path.resolve(__dirname, `source/mixin`),
-                '@consts': path.resolve(__dirname, `src/consts`),
-            }
-        }
+            new ExtractTextPlugin({filename: 'style.css'})
+        ]
     };
 };

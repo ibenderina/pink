@@ -2,3 +2,11 @@
   background-color: #283745;
   border-top: 1px solid #485360;
 }
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+}

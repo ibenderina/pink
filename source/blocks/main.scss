@@ -1,10 +1,12 @@
 @import "../mixin";
 
 .main__wrapper {
-  padding: 300px 10px 30px 10px;
-
   @include mainHeadline;
   background-size: 100% 51%;
+
+  &--index {
+    padding: 300px 10px 30px 10px;
+  }
 }
 
 @media (min-width: 507px) and (max-width: 767px) {
@@ -13,10 +15,22 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 999px) {
   .main__wrapper {
-    padding: 40px 300px 40px 40px;
-
     background-size: 100%;
+
+    &--index {
+      padding: 40px 300px 40px 40px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .main__wrapper {
+    background-size: 100%;
+
+    &--index {
+      padding: 40px 420px 40px 40px;
+    }
   }
 }

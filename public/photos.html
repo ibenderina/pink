@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Pink</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -94,6 +95,7 @@
             <span class="comment__likes-count"> 215</span>
           </span>
         </div>
+        <button class="photo__delete-button"></button>
       </li>
       <li class="photo-list__photo photo">
         <img class="photo__image" src="../img/photo-1-mobile@1x.jpg" alt="">
@@ -107,6 +109,21 @@
             <span class="comment__likes-count"> 356</span>
           </span>
         </div>
+        <button class="photo__delete-button"></button>
+      </li>
+      <li class="photo-list__photo photo">
+        <img class="photo__image" src="../img/photo-5-mobile@1x.jpg" alt="">
+        <div class="photo__comment comment">
+          <span class="comment__name">Котейка
+            <span class="comment__time">(666 ЧАСОВ НАЗАД)</span>
+          </span>
+          <p class="comment__text">Мур мяу.
+          </p>
+          <span class="comment__likes-text">НРАВИТСЯ:
+            <span class="comment__likes-count"> 666</span>
+          </span>
+        </div>
+        <button class="photo__delete-button"></button>
       </li>
     </ul>
   </section>
@@ -116,6 +133,7 @@
     </p>
     <form class="upload__form">
       <div class="upload__photo">
+        <button class="upload__photo-button">Загрузить фото</button>
         <img class="upload__photo-image" src="../img/photo-7-mobile@1x.jpg" alt="">
       </div>
       <div class="upload__filters filters">
@@ -144,10 +162,10 @@
           <label class="filters__scale-label">
             <input class="filters__scale-range" type="range" min="0" max="100" step="1" value="50" id="crop">
           </label>
-          <label class="filters__scale-label visually-hidden">
+          <label class="filters__scale-label">
             <input class="filters__scale-range" type="range" min="0" max="100" step="1" value="50" id="fill">
           </label>
-          <label class="filters__scale-label visually-hidden">
+          <label class="filters__scale-label">
             <input class="filters__scale-range" type="range" min="0" max="100" step="1" value="50" id="contrast">
           </label>
         </div>
