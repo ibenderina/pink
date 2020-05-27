@@ -28,6 +28,18 @@ module.exports = (env) => {
         },
         plugins: [
             new ExtractTextPlugin({filename: 'style.css'})
-        ]
+        ],
+        resolve: {
+            alias: {
+                '@api': path.resolve(__dirname, `src/api`),
+                '@utils': path.resolve(__dirname, `src/utils`),
+                '@components': path.resolve(__dirname, `src/components`),
+                '@consts': path.resolve(__dirname, `src/consts`),
+                '@controllers': path.resolve(__dirname, `src/controllers`),
+                '@abstract': path.resolve(__dirname, `src/components/abstract`),
+                '@smart-abstract': path.resolve(__dirname, `src/components/smart`),
+                '@models': path.resolve(__dirname, `src/models`),
+            }
+        }
     };
 };

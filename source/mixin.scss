@@ -14,14 +14,6 @@
   }
 }
 
-@mixin mainHeadline {
-  background-color: #283745;
-  background-image: url("/img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-
-  text-align: center;
-}
-
 @mixin tableCellState {
   content: "";
 

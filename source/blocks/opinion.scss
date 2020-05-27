@@ -22,7 +22,12 @@
   line-height: 30px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+.opinion--two,
+.opinion--three {
+  display: none;
+}
+
+@media (min-width: 768px) {
   .opinion__text {
     order: 0;
 

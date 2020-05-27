@@ -1,12 +1,12 @@
 .buttons {
   display: inline-block;
+  width: 100%;
   max-width: 300px;
 }
 
 .buttons-style {
-  display: block;
   margin-bottom: 15px;
-  width: 200px;
+  width: 100%;
   padding: 15px;
 
   border: 2px solid rgba(40, 54, 69, 0.3);
@@ -27,13 +27,17 @@
   };
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 500px) {
   .buttons {
-    display: inline-block;
-    padding: 95px 20px 20px 20px;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: space-evenly;
   }
 
-  .buttons-style:first-of-type {
-    margin-bottom: 55px;
+  .buttons-style {
+    width: 30%;
+    max-width: 200px;
   }
 }

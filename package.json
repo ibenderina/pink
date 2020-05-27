@@ -7,7 +7,7 @@
     "eslint": "eslint src/**/*.js",
     "test": "npm run eslint",
     "build": "webpack -p --env.type=development",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open --host 0.0.0.0"
   },
   "devDependencies": {
     "css-loader": "3.5.3",

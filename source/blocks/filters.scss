@@ -1,16 +1,17 @@
 .filters {
   display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   padding: 20px 0;
 }
 
 .filters__item-block {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .filters__item {
@@ -19,11 +20,13 @@
 }
 
 .filters__scale-block {
-  display: flex;
+  margin: 0 auto;
+  padding: 15px 0;
+  width: 100%;
 }
 
 .filters__scale-range {
-  width: 220px;
+  width: 100%;
 
   &:hover {
     border-color: rgba(40, 54, 69, 0.6);
@@ -40,39 +43,4 @@
   &:active {
     fill: #d22856;
   }
-}
-
-.filters__item--fill,
-.filters__item--contrast {
-  display: none;
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .filters {
-    display: flex;
-    flex-direction: row;
-    width: 40%;
-}
-
-  .filters__scale-block {
-    display: flex;
-    padding: 7px 15px 10px 15px;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 232px;
-  }
-
-  .filters__item {
-    padding: 25px 10px;
-  }
-
-.filters__item-block {
-display: block;
-}
-
-.filters__item--crop,
-.filters__item--fill,
-.filters__item--contrast {
-display: block;
-}
 }

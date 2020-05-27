@@ -1,36 +1,61 @@
-@import "../mixin";
-
 .main__wrapper {
-  @include mainHeadline;
-  background-size: 100% 51%;
+  max-width: 1300px;
+  margin: 0 auto;
 
-  &--index {
-    padding: 300px 10px 30px 10px;
+  background-color: #283745;
+  background-image: url("/img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  text-align: center;
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .main__wrapper  {
+      background-image: url("/img/bg-back-mobile@2x.jpg");
+    }
   }
 }
 
-@media (min-width: 507px) and (max-width: 767px) {
-  .main__wrapper {
+.main__wrapper--index {
+  padding: 300px 10px 30px 10px;
+}
 
-  }
+.main__block {
+  background-color: #2c3c4a;
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
   .main__wrapper {
     background-size: 100%;
+    background-image: url("/img/bg-back-tablet@1x.jpg");
 
-    &--index {
-      padding: 40px 300px 40px 40px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .main__wrapper  {
+        background-image: url("/img/bg-back-tablet@2x.jpg");
+      }
     }
+  }
+
+  .main__wrapper--index {
+    padding: 40px 300px 40px 40px;
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
   .main__wrapper {
     background-size: 100%;
+    background-image: url("/img/bg-back-desktop@1x.jpg");
 
-    &--index {
-      padding: 40px 420px 40px 40px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      .main__wrapper  {
+        background-image: url("/img/bg-back-desktop@2x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .main__wrapper--index {
+      padding: 100px 536px 79px 40px;
     }
   }
 }
