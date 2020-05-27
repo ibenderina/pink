@@ -6,3 +6,8 @@ export const RenderPosition = {
     BEFOREBEGIN: `beforebegin`,
     AFTEREND: `afterend`
 };
+
+export const OpinionCount = {
+    ALL: 10,
+    SHOWN: 1
+};
