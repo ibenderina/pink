@@ -1,7 +1,7 @@
+import {HIDDEN_CLASS, RenderPosition} from "@consts";
 import {render} from "@utils/render";
 import NavComponent from "@components/nav/nav";
 import NavToggleComponent from "@components/nav-toggle/nav-toggle";
-import {HIDDEN_CLASS, RenderPosition} from "@consts";
 import OpinionsListComponent from "@components/opinions/opinions";
 import OpinionComponent from "@components/opinion/opinion";
 
@@ -25,11 +25,17 @@ export default class PageController {
         render(this._headerMainLine, this._navToggleComponent.getElement());
         render(this._opinions, this._opinionsListComponent.getElement(), RenderPosition.AFTERBEGIN);
 
-        const opinions = document.querySelector(`.opinions__list`);
+        const opinionsElement = document.querySelector(`.opinions__list`);
+        this._opinionsModel.getOpinions().forEach((opinionModel, i) => {
+            const opinionComponent = new OpinionComponent(opinionModel);
+            render(opinionsElement, opinionComponent.getElement());
+            if (i) {
+                opinionComponent.hide();
+            }
+        });
 
-        const currentOpinion = this._opinionsModel.getOpinions()[0];
-        const opinionComponent = new OpinionComponent(currentOpinion);
-        render(opinions, opinionComponent.getElement());
+        this._setNextButtonClickHandler(this._toggleOpinions);
+        this._setPrevButtonClickHandler(this._toggleOpinions);
 
         this._navToggleComponent.setToggleNavButtonHandler(this._toggleNavigation);
 
@@ -39,10 +45,39 @@ export default class PageController {
         window.addEventListener(`resize`, this._resizeScreenWidth);
     }
 
-    _toggleOpinion() {
-        const nextButton = document.querySelector(`.opinions__button--next`);
-        const prevButton = document.querySelector(`.opinions__button--prev`);
-        const opinionComponent = new OpinionComponent();
+    _toggleOpinions(nextButtonClick) {
+        const currentOpinionElement = document.querySelector(`.opinion:not(.${HIDDEN_CLASS})`);
+
+        let nextOpinionElement = currentOpinionElement.previousElementSibling;
+        let outOpinionSelector = `.opinion:last-child`;
+
+        if (nextButtonClick) {
+            nextOpinionElement = currentOpinionElement.nextElementSibling;
+            outOpinionSelector = `.opinion:first-child`;
+        }
+
+        currentOpinionElement.classList.add(HIDDEN_CLASS);
+
+        if (nextOpinionElement) {
+            nextOpinionElement.classList.remove(HIDDEN_CLASS);
+        } else {
+            const firstOpinionElement = document.querySelector(outOpinionSelector);
+            firstOpinionElement.classList.remove(HIDDEN_CLASS);
+        }
+    }
+
+    _setNextButtonClickHandler(handler) {
+        document.querySelector(`.opinions__button--next`)
+            .addEventListener(`click`, () => {
+                handler(true);
+            });
+    }
+
+    _setPrevButtonClickHandler(handler) {
+        document.querySelector(`.opinions__button--prev`)
+            .addEventListener(`click`, () => {
+                handler(false);
+            });
     }
 
     _resizeScreenWidth() {

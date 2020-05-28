@@ -1,6 +1,6 @@
 import Opinion from "@models/opinion";
 
-export default class Opinions {
+export default class OpinionsComponent {
     constructor() {
         this._opinionsList = [];
     }
