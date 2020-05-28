@@ -5,7 +5,7 @@ const createNavTemplate = () => {
                   <a class="nav__list-link" href="index.html">Главная</a>
                 </li>
                 <li class="nav__list-item">
-                  <a class="nav__list-link" href="photos.html">Фотографии</a>
+                  <a class="nav__list-link" href="index.html#photos">Фотографии</a>
                 </li>
               </ul>
             </nav>`

@@ -1,4 +1,4 @@
-export default class Opinion {
+export default class OpinionModel {
     constructor(rawDataItem) {
         this.id = rawDataItem.id;
         this.text = rawDataItem.text;

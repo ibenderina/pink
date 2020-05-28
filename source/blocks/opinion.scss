@@ -3,7 +3,15 @@
   flex-direction: column;
 
   text-align: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s, visibility 1s;
 }
+
+.opinion.visually-hidden {
+   opacity: 0;
+   visibility: hidden;
+ }
 
 .opinion__name {
   order: 1;
@@ -29,6 +37,8 @@
 
 @media (min-width: 768px) {
   .opinion__text {
+    min-height: 100px;
+
     order: 0;
 
     font-size: 18px;

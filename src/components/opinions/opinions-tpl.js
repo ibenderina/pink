@@ -3,3 +3,4 @@ const createOpinionsListTemplate = () => {
 };
 
 export {createOpinionsListTemplate};
+

@@ -12,12 +12,37 @@
   list-style-type: none;
 }
 
-.opinions__toggle {
-  text-align: center;
+.opinions__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 500px;
+  margin: -68px auto 20px auto;
+  z-index: 10;
 }
 
-.opinions__toggle-radio {
-  @include toggleStyle;
+.opinions__button {
+  width: 50px;
+  height: 50px;
+
+  background-image: url("/img/icons/arrow_right_drop_circle_outline_icon_139946.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  opacity: 0.6;
+
+  &--prev {
+    transform: scaleX(-1);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
