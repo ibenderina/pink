@@ -7,3 +7,6 @@ const createOpinionTemplate = (opinion) => {
 };
 
 export {createOpinionTemplate};
+
+// TODO сделать скрытие длинных текстов
+// TODO зафиксировать расположение кнопок переключения

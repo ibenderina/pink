@@ -16,3 +16,5 @@ const createPhotoTemplate = (photo) => {
 };
 
 export {createPhotoTemplate};
+
+// TODO продумать реализацию очень длинных комментариев

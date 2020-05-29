@@ -34,13 +34,16 @@
 }
 
 .filters__item-image {
-  fill: rgba(40, 54, 69, 0.3);
+  filter: brightness(0);
+  opacity: 0.4;
 
-  &:hover {
-    fill: rgba(40, 54, 69, 0.6);
+  &:hover,
+  &:focus {
+    filter: none;
+    opacity: 1;
   }
 
   &:active {
-    fill: #d22856;
+    opacity: 0.2;
   }
 }

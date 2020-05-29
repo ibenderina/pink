@@ -1,6 +1,6 @@
 .benefits {
   position: relative;
-  padding: 30px 0;
+  padding: 50px 0 0 0;
 
   background-color: #ffffff;
 
@@ -14,13 +14,16 @@
 
     z-index: 1;
     position: absolute;
-    bottom: 48px;
-    left: 25%;
-    width: 172px;
-    height: 289px;
+    margin-bottom: -40px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 332px;
+    clip: rect(auto, auto, 292px, auto);
 
+    background-position: bottom;
     background-image: url(/img/iphone-screen-mobile@1x.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 
@@ -55,18 +58,16 @@
 .benefits__list {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 30px 0 300px 0;
+  padding: 50px 0 300px 0;
 
   list-style-type: none;
 }
 
 .benefits__text {
   margin: 0;
-}
 
-@media (min-width: 500px) and (max-width: 767px) {
-  .benefits:before {
-    left: 31%;
+  &:nth-of-type(2) {
+    padding-bottom: 40px;
   }
 }
 
@@ -75,11 +76,11 @@
     padding: 67px 0 0 0;
 
     &:before {
-      bottom: 5%;
-      left: 4%;
       width: 270px;
       height: 480px;
+      left: 6%;
       z-index: 10;
+      clip: rect(auto, auto, 439px, auto);
 
       background-image: url(/img/iphone-screen-3-tablet@1x.png);
     }
@@ -91,8 +92,9 @@
     }
   }
 
-  .benefits__wrapper::after {
-
+  .benefits__wrapper:after {
+    width: 100vw;
+    height: 30vh;
   }
 
   .benefits__text {
@@ -105,7 +107,7 @@
   }
 
   .benefits__list {
-    padding: 30px 0 30px 300px;
+    padding: 80px 0 30px 300px;
   }
 }
 
@@ -118,8 +120,9 @@
     }
   }
 
-  .benefits__wrapper::after {
-
+  .benefits__wrapper:after {
+    width: 100%;
+    height: 20%;
   }
 
   .benefits__text {

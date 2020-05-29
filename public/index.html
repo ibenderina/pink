@@ -11,46 +11,42 @@
 <header class="header">
   <div class="header__wrapper">
     <div class="header__main-line main-line">
-      <a class="main-line__logo-link" href="index.html">
+      <a class="main-line__logo-link" href="#">
         <picture>
           <source media="(min-width: 1000px)" srcset="img/logo-pink-white-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-pink-white-tablet.svg">
           <source srcset="img/logo-pink-white-mobile.svg">
-          <img class="main-line__logo-image" src="img/logo-pink-white-mobile.svg" width="191" height="39" alt="">
+          <img class="main-line__logo-image" src="img/logo-pink-white-mobile.svg" width="191" height="39" alt="Логотип сайта">
         </picture>
       </a>
-
-<!--      Кнопка переключения навигации-->
-
+      <!--      Кнопка переключения навигации-->
     </div>
-
-<!--    Навигация-->
-
+    <!--    Навигация-->
   </div>
 </header>
 <main class="main">
   <h1 class="visually-hidden">Приложение для обмена фотографиями "Пинк"</h1>
-  <h2 class="visually-hidden">Как скачать</h2>
-    <section class="download">
-      <div class="main__wrapper main__wrapper--index">
-        <p class="download__text">Взгляните на жизнь иначе!</p>
-        <button class="download__button">Скачать приложение</button>
-        <div class="download__links">
-          <a class="download__link" href="" aria-label="">
-            <img class="download__link-item" src="img/logo-apple.svg" alt="Скачать для iPhone">
-          </a>
-          <a class="download__link" href="" aria-label="">
-            <img class="download__link-item" src="img/logo-android.svg" alt="Скачать для Android">
-          </a>
-          <a class="download__link" href="" aria-label="">
-            <img class="download__link-item" src="img/logo-microsoft.svg" alt="Скачать для Windows Phone">
-          </a>
-        </div>
-        <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+  <section class="download">
+    <h2 class="visually-hidden">Как скачать</h2>
+    <div class="main__wrapper main__wrapper--index">
+      <p class="download__text">Взгляните на жизнь иначе!</p>
+      <button class="download__button">Скачать приложение</button>
+      <div class="download__links">
+        <a class="download__link" href="" aria-label="">
+          <img class="download__link-item" src="img/logo-apple.svg" alt="Скачать для iPhone">
+        </a>
+        <a class="download__link" href="" aria-label="">
+          <img class="download__link-item" src="img/logo-android.svg" alt="Скачать для Android">
+        </a>
+        <a class="download__link" href="" aria-label="">
+          <img class="download__link-item" src="img/logo-microsoft.svg" alt="Скачать для Windows Phone">
+        </a>
       </div>
-    </section>
-  <h2 class="visually-hidden">Преимущества приложения</h2>
+      <p class="download__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+    </div>
+  </section>
   <section class="benefits">
+    <h2 class="visually-hidden">Преимущества приложения</h2>
     <p class="benefits__text">Устали от серости мегаполиса?</p>
     <p class="benefits__text">Нам есть, что вам предложить!</p>
     <div class="benefits__wrapper">
@@ -58,44 +54,44 @@
         <li class="benefits__list-item benefit">
           <p class="benefit__text">Поднимает настроение</p>
           <span class="benefit__description">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!
-          </span>
+              </span>
         </li>
         <li class="benefits__list-item benefit">
           <p class="benefit__text">Меняет мир вокруг</p>
           <span class="benefit__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </span>
+              </span>
         </li>
         <li class="benefits__list-item benefit">
           <p class="benefit__text">Заводит новых друзей</p>
           <span class="benefit__description">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
-          </span>
+              </span>
         </li>
       </ul>
     </div>
   </section>
   <section class="research">
+    <h2 class="visually-hidden">Исследования о влиянии приложения</h2>
     <div class="research__wrapper">
       <p class="research__text">Эффект на 24 часа!</p>
       <span class="research__description">Британские ученые провели исследования и доказали, что положительный эффект от
-        использования приложения длится целые сутки!
-      </span>
+          использования приложения длится целые сутки!
+          </span>
       <a class="research__link" href="" aria-label="">Узнать больше об исследовании</a>
     </div>
   </section>
   <section class="opinions">
-
-<!--    Список отзывов-->
-
-<!--    Отзыв -->
-
+    <h2 class="visually-hidden">Отзывы о приложении</h2>
+    <!--    Список отзывов-->
+    <!--    Отзыв -->
     <div class="opinions__buttons">
       <button class="opinions__button opinions__button--prev" type="button" aria-label="Следующий отзыв"></button>
       <button class="opinions__button opinions__button--next" type="button" aria-label="Предыдущий отзыв"></button>
     </div>
   </section>
   <section class="price-list">
+    <h2 class="visually-hidden">Тарифы приложения</h2>
     <div class="price-list__wrapper">
-      <table class="price-list__table table" border="1" cellspacing="0">
+      <table class="price-list__table table">
         <thead class="table__header">
         <tr class="table__row">
           <th class="table__cell table__cell--empty visually-hidden"></th>
@@ -147,25 +143,22 @@
       </div>
     </div>
   </section>
-  <section class="main__photos-block photos-block">
-    <a name="photos"></a>
+  <section class="main__photos-block photos-block" id="photos">
+    <h2 class="visually-hidden">Фотографии пользователей</h2>
     <p class="photos-block__text">Взгляните на фотографии, которые выкладывают пользователи!</p>
     <p class="photos-block__text">Видите, как не хватает ваших?</p>
-
     <!--    Список фотографий-->
-
     <!--    Фотография-->
-
   </section>
   <section class="upload">
+    <h2 class="visually-hidden">Загрузка ваших фотографий</h2>
     <p class="upload__text">Затмите их всех!
       <span class="upload__text-br">Выкладывайте все, что накопилось в телефоне!</span>
     </p>
-
-<!--    Загрузка и редактирование фотографий -->
-
+    <!--    Загрузка и редактирование фотографий -->
   </section>
   <section class="contacts">
+    <h2 class="visually-hidden">Наши контакты</h2>
     <div class="contacts__wrapper">
       <p class="contacts__text">Остались вопросы?</p>
       <p class="contacts__text">Свяжитесь с нами!</p>
@@ -185,7 +178,7 @@
       </ul>
     </div>
     <div class="contacts__map">
-      <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20054.39682704579!2d30.328592384160043!3d59.93440779445066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1589630070835!5m2!1sru!2sru" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">ы
+      <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20054.39682704579!2d30.328592384160043!3d59.93440779445066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1589630070835!5m2!1sru!2sru" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
       </iframe>
     </div>
   </section>

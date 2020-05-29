@@ -59,22 +59,25 @@
   .benefit__text {
     position: relative;
 
+    font-size: 30px;
+    line-height: 30px;
+
     &:before {
       content: "";
 
       position: absolute;
       display: block;
-      bottom: 192%;
-      left: 1%;
-      width: 200px;
-      height: 344px;
+      bottom: 0;
+      left: 0;
+      width: 300px;
+      height: 400px;
       z-index: 10;
+      margin-bottom: 120px;
 
       background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 190px auto;
-
-      filter: drop-shadow(0px 8px 6px rgba(45, 68, 87, 0.6));
+      background-position: bottom;
+      background-size: contain;
+      clip: rect(auto, auto, 439px, auto);
     }
   }
 }

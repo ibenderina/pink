@@ -7,10 +7,6 @@
   margin: 0 auto;
 }
 
-.footer__logo {
-  fill: #d22856;
-}
-
 .footer__logo--desktop {
   display: none;
 }
@@ -68,10 +64,8 @@
 }
 
 .footer__developer-logo {
-  opacity: 0.6;
-
   &:hover {
-    opacity: 1;
+    filter: brightness(0);
   }
 
   &:active {

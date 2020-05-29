@@ -3,6 +3,10 @@
 }
 
 @media (min-width: 768px) {
+  .research {
+    padding-top: 30px;
+  }
+
   .research__wrapper {
     position: relative;
     max-width: 1300px;
@@ -71,6 +75,7 @@
   }
 
   .research__wrapper {
-    padding-bottom: 160px;
+    padding-bottom: 80px;
+    max-width: 600px;
   }
 }
