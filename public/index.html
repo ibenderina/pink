@@ -91,54 +91,16 @@
   <section class="price-list">
     <h2 class="visually-hidden">Тарифы приложения</h2>
     <div class="price-list__wrapper">
-      <table class="price-list__table table">
-        <thead class="table__header">
-        <tr class="table__row">
-          <th class="table__cell table__cell--empty visually-hidden"></th>
-          <th class="table__cell table__cell--headline">
-            <span class="table__cell">БАЗА</span>
-            <span class="table__cell">1,99 USD</span>
-          </th>
-          <th class="table__cell table__cell--headline">
-            <span class="table__cell">СТАНДАРТ</span>
-            <span class="table__cell">3,99 USD</span>
-          </th>
-          <th class="table__cell table__cell--headline">
-            <span class="table__cell">АНЛИМ</span>
-            <span class="table__cell">9,99 USD</span>
-          </th>
-        </tr>
-        </thead>
-        <tbody class="table__content">
-        <tr class="table__row">
-          <th class="table__cell table__cell--row-name">Розовый фильтр</th>
-          <th class="table__cell table__cell--yes table__cell--pink"></th>
-          <th class="table__cell table__cell--yes table__cell--pink"></th>
-          <th class="table__cell table__cell--yes table__cell--pink"></th>
-        </tr>
-        <tr class="table__row">
-          <th class="table__cell table__cell--row-name">Смайлики</th>
-          <th class="table__cell table__cell--no"></th>
-          <th class="table__cell table__cell--yes table__cell--smiles"></th>
-          <th class="table__cell table__cell--yes table__cell--smiles"></th>
-        </tr>
-        <tr class="table__row">
-          <th class="table__cell table__cell--row-name">Комментарии</th>
-          <th class="table__cell table__cell--no"></th>
-          <th class="table__cell table__cell--no"></th>
-          <th class="table__cell table__cell--yes table__cell--comments"></th>
-        </tr>
-        </tbody>
-      </table>
+<!--      Таблица с ценами-->
       <div class="price-list__toggle">
-        <label class="price-list__toggle-label" id="price1">
-          <input class="price-list__toggle-radio" type="radio" name="price">
+        <label class="price-list__toggle-label">
+          <input class="price-list__toggle-radio" type="radio" name="price" id="price--base">
         </label>
-        <label class="price-list__toggle-label" id="price2">
-          <input class="price-list__toggle-radio" type="radio" name="price">
+        <label class="price-list__toggle-label">
+          <input class="price-list__toggle-radio" type="radio" name="price" id="price--standard" checked>
         </label>
-        <label class="price-list__toggle-label" id="price3">
-          <input class="price-list__toggle-radio" type="radio" name="price">
+        <label class="price-list__toggle-label">
+          <input class="price-list__toggle-radio" type="radio" name="price" id="price--unlimited">
         </label>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 .table {
   background-color: inherit;
+  width: 100%;
 }
 
 .table__content {
@@ -33,6 +34,12 @@
 
 .table__cell--comments:before {
   content: "Комментарии";
+
+  font-weight: lighter;
+}
+
+.table__cell--no:before {
+  content: "—";
 
   font-weight: lighter;
 }
