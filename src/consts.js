@@ -19,20 +19,20 @@ export const Filter = {
     min: 0,
     max: 10,
     unit: 'px',
-    filter: 'brightness'
+    filter: 'blur'
   },
 
   'fill': {
-    min: 0,
-    max: 1,
-    unit: '',
-    filter: 'greyscale'
+    min: 10,
+    max: 190,
+    unit: '%',
+    filter: 'saturate'
   },
 
   'contrast': {
-    min: 0.2,
-    max: 10,
-    unit: '',
+    min: 10,
+    max: 150,
+    unit: '%',
     filter: 'brightness'
   },
 };

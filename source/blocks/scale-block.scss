@@ -5,9 +5,8 @@
   width: 495px;
   height: 33px;
 
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 33px;
   transform: translateX(-50%);
+  border: none;
 
   font-size: 12px;
   line-height: 42px;
@@ -27,7 +26,7 @@
   left: 20px;
   height: 5px;
 
-  background-color: rgba(255, 231, 81, 0.4);
+  background-color: rgba(210, 40, 86, 0.4);
   transform: translateY(-50%);
 
   font-size: 0;
@@ -43,7 +42,7 @@
   height: 18px;
   margin: -9px 0 0;
 
-  background-color: #ffe753;
+  background-color: #d22856;
   border-radius: 50%;
   transform: translateX(-50%);
   cursor: move;
@@ -54,5 +53,5 @@
   width: 20%;
   height: 100%;
 
-  background-color: #ffe753;
+  background-color: #d22856;
 }
