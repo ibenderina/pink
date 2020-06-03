@@ -1,0 +1,98 @@
+.effects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border: none;
+}
+
+.effects__list {
+  width: 100%;
+  margin: 0 auto;
+  border: none;
+}
+
+.effects__item {
+  display: inline-block;
+  width: 30%;
+  height: 100px;
+}
+
+.effects__label {
+  opacity: 0.6;
+  filter: grayscale(0);
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--blur:before {
+    background-image: url("/img/water-solid.svg");
+  }
+
+  &--fill:before {
+    background-image: url("/img/icon-editor-fill.svg");
+  }
+
+  &--contrast:before {
+    background-image: url("/img/icon-editor-contrast.svg");
+  }
+}
+
+.effects__label:hover {
+  opacity: 1;
+}
+
+.effects__label:active {
+  opacity: 0.2;
+}
+
+.effects__preview {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5px;
+
+  overflow: hidden;
+
+  font-size: 0;
+
+  background-color: #314359;
+  background-position: center;
+  background-size: 100% auto;
+
+  border: solid 5px transparent;
+  border-radius: 5px;
+}
+
+.effects__preview:last-of-type {
+  margin-right: 0;
+}
+
+.effects__radio:checked + .effects__label .effects__preview {
+  border: 5px solid #ffe753;
+}
+
+.effects__radio:focus + .effects__label .effects__preview {
+  outline: auto 5px highlight;
+}
+
+.effects__preview--blur {
+  filter: grayscale(1);
+}
+
+.effects__preview--fill {
+  filter: sepia(1);
+}
+
+.effects__preview--contrast {
+  filter: invert(100%);
+}

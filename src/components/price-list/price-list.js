@@ -6,3 +6,5 @@ export default class PriceListComponent extends AbstractComponent {
     return createPriceListTemplate();
   }
 }
+
+// TODO разобраться с горизонтальной прокруткой из-за этого блока
