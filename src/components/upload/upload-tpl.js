@@ -14,7 +14,7 @@ const createUploadTemplate = () => {
             </div>
             <form class="upload__form">
               <div class="upload__photo">
-                <img class="upload__photo-image" src="/img/photo-2-mobile@1x.jpg" alt="Ваша загруженная фотография" width="300" height="300">
+                <img class="upload__photo-image" src="/img/photo-2.jpg" alt="Ваша загруженная фотография" width="300" height="300">
               </div>
               <div class="upload__effects filters">
                 <fieldset class="filters__effects effects">
@@ -43,7 +43,7 @@ const createUploadTemplate = () => {
               </div>
               <div class="upload__comment">
                 <label class="upload__comment-label">
-                  <input class="upload__comment-input" type="text" placeholder="Введите имя">
+                  <input class="upload__comment-input upload__comment-input--name" type="text" placeholder="Введите имя">
                 </label>
                 <label class="upload__comment-label">
                   <textarea class="upload__comment-input upload__comment-input--textarea" placeholder="Введите комментарий"></textarea>

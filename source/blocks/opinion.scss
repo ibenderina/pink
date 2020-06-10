@@ -8,6 +8,16 @@
   transition: opacity 1s, visibility 1s;
 }
 
+.opinion__more-button {
+  display: inline-flex;
+  border: none;
+  width: fit-content;
+
+  font-size: 18px;
+  line-height: 30px;
+  color: #150FF7;
+}
+
 .opinion.visually-hidden {
    opacity: 0;
    visibility: hidden;
@@ -25,6 +35,9 @@
 
 .opinion__text {
   order: 3;
+
+  max-height: 30px;
+  overflow: hidden;
 
   font-size: 14px;
   line-height: 30px;

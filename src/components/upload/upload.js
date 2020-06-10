@@ -29,4 +29,9 @@ export default class UploadComponent extends AbstractComponent {
     this.getElement().querySelector(`.scale-block__pin`)
     .addEventListener(`mousedown`, handler);
   }
+
+  setSubmitHandler(handler) {
+    this.getElement().querySelector(`.buttons__submit`)
+    .addEventListener(`click`, handler);
+  }
 }

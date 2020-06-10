@@ -13,8 +13,13 @@
   width: 60px;
   filter: invert(1) grayscale(100%) brightness(100);
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: none;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 

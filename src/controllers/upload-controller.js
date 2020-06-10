@@ -2,15 +2,18 @@ import UploadComponent from "@components/upload/upload";
 import {render} from "@utils/render";
 import {getFilter} from "@utils/common";
 import {FILE_TYPES, Filter} from "@consts";
+import PhotoModel from "@models/photo";
 
 export default class UploadController {
-  constructor() {
+  constructor(photosModel) {
     this._uploadElement = document.querySelector(`.upload`);
-
     this._changeUploadPhoto = this._changeUploadPhoto.bind(this);
     this._setEffectLevelCoords = this._setEffectLevelCoords.bind(this);
     this._effectLevelPinChanger = this._effectLevelPinChanger.bind(this);
     this._changeEffect = this._changeEffect.bind(this);
+    this._onSetupSubmitClick = this._onSetupSubmitClick.bind(this);
+
+    this.photosModel = photosModel;
   }
 
   render() {
@@ -20,6 +23,7 @@ export default class UploadController {
     this._uploadComponent.setUploadFileHandler(this._changeUploadPhoto);
     this._uploadComponent.setChangeFilterEffectHandler(this._changeEffect);
     this._uploadComponent.setMouseDownPinHandler(this._effectLevelPinChanger);
+    this._uploadComponent.setSubmitHandler(this._onSetupSubmitClick);
   }
 
   _changeUploadPhoto(evt) {
@@ -121,60 +125,24 @@ export default class UploadController {
     document.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseup', onMouseUp);
   }
+
+  _onSetupSubmitClick(evt) {
+    const photosElement = document.querySelector(`photo-list`);
+    const uploadPhoto = document.querySelector(`upload__photo-image`);
+    const uploadInputName = document.querySelector(`upload__comment-input--name`);
+    const uploadInputText = document.querySelector(`upload__comment-input--textarea`);
+
+    evt.preventDefault();
+    console.log(567);
+
+    const photoModel = new PhotoModel({
+      src: `5`,
+      name: `test`,
+      time: `20`,
+      text: `test`,
+      likes: 0
+    });
+
+    this.photosModel.add(photoModel);
+  };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// _changeFilterEffect(coords) {
-//   let uploadPreview = document.querySelector(`.upload__photo-image`);
-//   const currentEffect = document.querySelector(`.effects__input:checked`);
-//
-//   if (currentEffect && uploadPreview) {
-//     const filter = Filter[currentEffect.value];
-//
-//     if (filter) {
-//       const scaleBlockLine = document.querySelector(`.scale-block__line`);
-//       const levelPart = coords / scaleBlockLine.clientWidth;
-//       uploadPreview.classList.value = `upload__photo-image effects__preview--${currentEffect.value}`;
-//       uploadPreview.style.filter = ``;
-//       uploadPreview.style.filter = getFilter(filter, levelPart);
-//
-//       // TODO изменить значение глубины эффекта на текущее положение пина
-//     }
-//   }
-//
-//   this._setEffectLevelCoords(coords);
-// }
-//
-// _setEffectLevelCoords(coords) {
-//   const scaleBlockLine = document.querySelector(`.scale-block__line`);
-//   const scaleBlockPin = document.querySelector(`.scale-block__pin`);
-//   const scaleBlockDepth = document.querySelector(`.scale-block__depth`);
-//
-//   if (coords >= 0 && coords <= scaleBlockLine.clientWidth) {
-//     scaleBlockPin.style.left = coords + 'px';
-//     scaleBlockDepth.style.width = coords + 'px';
-//   }
-// }
-//
-// _findPinStartCoords(evt) {
-//   evt.preventDefault();
-//   let startCoords = evt.clientX;
-//   console.log(startCoords);
-// }

@@ -9,7 +9,7 @@
   width: 100%;
   padding: 15px;
 
-  border: 2px solid rgba(40, 54, 69, 0.3);
+  border: 3px solid rgba(40, 54, 69, 0.3);
   border-radius: 50px;
   background-color: transparent;
 
@@ -24,7 +24,38 @@
   &:active {
     border-color: #d22856;
     color: #d22856;
-  };
+  }
+}
+
+.buttons__submit {
+  border-color: #d22856;
+  color: #d22856;
+
+  &:hover {
+    background-color: #d22856;
+    border-color: #ffffff;
+
+    color: #ffffff;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.buttons__cancel {
+  &:hover {
+    border-color: #d22856;
+    color: #d22856;
+  }
+
+  &:active {
+    background-color: #d22856;
+    border-color: #ffffff;
+
+    color: #ffffff;
+    opacity: 0.4;
+  }
 }
 
 @media (min-width: 500px) {

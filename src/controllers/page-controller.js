@@ -23,6 +23,9 @@ export default class PageController {
     this._changeNavView = this._changeNavView.bind(this);
     this._changePriceListView = this._changePriceListView.bind(this);
     this._showCurrentPrice = this._showCurrentPrice.bind(this);
+    this._showMoreOpinion = this._showMoreOpinion.bind(this);
+    this._hideOpinion = this._hideOpinion.bind(this);
+    this._toggleOpinions = this._toggleOpinions.bind(this);
   }
 
   render() {
@@ -48,6 +51,7 @@ export default class PageController {
     this._setNextButtonClickHandler(this._toggleOpinions);
     this._setPrevButtonClickHandler(this._toggleOpinions);
     this._setPriceToggleHandler(this._showCurrentPrice);
+    this._setShowMoreButtonHandler(this._showMoreOpinion);
 
     this._navToggleComponent.setToggleNavButtonHandler(this._toggleNavigation);
 
@@ -58,6 +62,23 @@ export default class PageController {
     window.addEventListener(`resize`, this._changeNavView);
     window.removeEventListener(`resize`, this._changePriceListView);
     window.addEventListener(`resize`, this._changePriceListView);
+  }
+
+  _hideOpinion(currentOpinionElement) {
+    const opinionText = currentOpinionElement.querySelector(`.opinion__text`);
+    const showMoreButton = currentOpinionElement.querySelector(`.opinion__more-button`);
+
+    opinionText.style.maxHeight = `30px`;
+    showMoreButton.style.color = `green`;
+  }
+
+  _showMoreOpinion(evt) {
+    const button = evt.target;
+    const currentOpinion = button.closest(`.opinion`);
+    const opinionText = currentOpinion.querySelector(`.opinion__text`);
+
+      opinionText.style.maxHeight = `none`;
+      button.style.color = `red`;
   }
 
   _changeNavView() {
@@ -141,6 +162,8 @@ export default class PageController {
       const firstOpinionElement = document.querySelector(outOpinionSelector);
       firstOpinionElement.classList.remove(HIDDEN_CLASS);
     }
+
+    this._hideOpinion(currentOpinionElement);
   }
 
   _setNextButtonClickHandler(handler) {
@@ -152,6 +175,13 @@ export default class PageController {
 
   _setPrevButtonClickHandler(handler) {
     document.querySelector(`.opinions__button--prev`)
+    .addEventListener(`click`, () => {
+      handler(false);
+    });
+  }
+
+  _setShowMoreButtonHandler(handler) {
+    document.querySelector(`.opinion__more-button`)
     .addEventListener(`click`, () => {
       handler(false);
     });

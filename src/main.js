@@ -19,5 +19,5 @@ pageController.render();
 const photoController = new PhotoController(photosModel);
 photoController.render();
 
-const uploadController = new UploadController();
+const uploadController = new UploadController(photosModel);
 uploadController.render();
