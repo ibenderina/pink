@@ -46,18 +46,17 @@
     background-image: url("/img/icon-heart.svg");
     background-repeat: no-repeat;
   }
-
-  &::before:active {
-    background-image: url("https://img.icons8.com/fluent/48/000000/filled-like.png");
-  }
 }
 
 .comment__likes-text:active {
   &::before {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
 
-    background-color: #d22856;
+    background-image: url("https://img.icons8.com/fluent/48/000000/filled-like.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
   }
 }
 
